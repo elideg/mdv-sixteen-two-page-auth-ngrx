@@ -1,3 +1,4 @@
+import { loadDrinks } from './../../../../core-state/src/lib/drinks/drinks.actions';
 import { Injectable, OnInit } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
@@ -21,5 +22,9 @@ export class AuthService implements OnInit{
 
   getToken() {
     return localStorage.getItem('user_Token');
+  }
+
+  logout() {
+    this.setToken('')
   }
 }

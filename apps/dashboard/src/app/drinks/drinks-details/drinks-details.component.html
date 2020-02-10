@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title *ngIf="currentDrink.id; else elseCreateNew"><h1>{{ originalTitle }}</h1></mat-card-title>
-    <ng-template #elseCreateNew><h1 class="border-bottom">Create a New Computer</h1></ng-template>
+    <ng-template #elseCreateNew><h1 class="border-bottom">Create a New Drink</h1></ng-template>
   </mat-card-header>
   <form [formGroup]="form" #formDirective="ngForm" (ngSubmit)="saveForm(formDirective)">
     <mat-card-content>
